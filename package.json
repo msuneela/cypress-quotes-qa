@@ -8,18 +8,19 @@
     },
     "devDependencies": {
         "cucumber": "^6.0.7",
-        "cypress": "^13.1.0",
+        "cypress": "^13.6.3",
         "cypress-cucumber-preprocessor": "^4.3.1",
         "eslint": "^8.21.0",
         "eslint-plugin-cypress": "^2.12.1",
         "typescript": "^4.7.4"
     },
     "cypress-cucumber-preprocessor": {
-        "nonGlobalStepDefinitions": true,
-        "stepDefinitions": "cypress/e2e/login/login_steps.ts"
+        "nonGlobalStepDefinitions": false,
+        "stepDefinitions": "cypress/e2e"
     },
     "scripts": {
-        "test": "cypress run --headed"
+        "test": "cypress run --headed",
+        "regression:open": "npx cypress open --env tags=\"@REGRESSION\""
     },
     "globals": {
         "cy": true

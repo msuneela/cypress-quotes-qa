@@ -8,7 +8,7 @@ let password: string;
 
 const loginDetails = {
     emailAddress: 'john.doe@uinsure.co.uk',
-    password: '',
+    password: 'Password2',
 };
 
 Given('the user is on the adviser platform login page', () => {

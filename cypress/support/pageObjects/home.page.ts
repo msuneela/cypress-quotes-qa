@@ -11,6 +11,8 @@ class Homepage {
     get search() {
         return cy.get('[data-testid="filter-button"]');
     }
+   
+    
 }
 
 export default new Homepage();

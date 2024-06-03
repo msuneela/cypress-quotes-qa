@@ -4,5 +4,5 @@
         "types": ["cypress"],
         "esModuleInterop": true
     },
-    "include": ["../../node_modules/cypress", "cypress/**/*.ts"]
+    "include": ["../../node_modules/cypress", "cypress/**/*.ts", "cypress/e2e/login.feature"]
 }
