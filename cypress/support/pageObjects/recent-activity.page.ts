@@ -18,13 +18,13 @@ class RecentActivityPage{
         return cy.get('input[type="checkbox"]',{timeout:1000});
     }
     get tablerows(){
-        return cy.get('tbody > tr', {timeout:60000});
+        return cy.get('tbody > tr', {timeout:1000});
     }
     verifySearchcriteria(searchcriteria){
-        cy.get('[data-testid="retrieved-quote"]', {timeout:40000}).eq(0).should('contain', searchcriteria)
+        cy.get('[data-testid="retrieved-quote"]', {timeout:1000}).eq(0).should('contain', searchcriteria)
     }
     verifyTableRowNumber(num){
-       cy.get('tbody > tr', {timeout:60000}).should('have.length',num)
+       cy.get('tbody > tr', {timeout:1000}).should('have.length',num)
     }
   get errortextPostcode(){
     return cy.get('#policy-postcode-helper-text')

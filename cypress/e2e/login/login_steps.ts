@@ -26,4 +26,10 @@ When('the user enters valid details and logs in', () => {
 Then('the user can navigate to recent activity', () => {
     cy.visit('https://quotes.test.uinsure.co.uk/retrieve-quote');
     homePage.quoteReference.should('be.visible');
+    cy.intercept({
+        method: 'POST',
+        url:'https://api.functions.test.uinsure.co.uk/api/RetrieveQuotes'
+
+    }).as('quotes')
+    cy.wait('@quotes').its('response.statusCode').should('equal', 200)
 });

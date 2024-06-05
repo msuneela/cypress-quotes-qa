@@ -7,6 +7,9 @@ import recentActivityPage from '../../support/pageObjects/recent-activity.page';
 
 
 When('the user search by a {string}  {string}', (reference,number) => {
+    
+    recentActivityPage.tablerows.should('be.visible');
+    
     recentActivityPage.quoteReference.type(number);
 });
 When('the user user search by a full or partial {string}',(reference)=>{
@@ -49,7 +52,8 @@ Then('the user reset the search fields, showing all recent activity', () => {
 
 Then('the user click search button should not show any results', () => {
     homePage.search.click();
-    recentActivityPage.tablerows.should("be.empty");
+    recentActivityPage.verifyTableRowNumber(0);
+
 })
 
 When('the user search by client invalid first or last name {string}', (name)=>{

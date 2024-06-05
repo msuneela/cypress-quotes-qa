@@ -19,7 +19,7 @@ Feature: Recent Activity
         |fullreference|UBTL0461719|UBTL0461719|
         |partialreference|1719|UBTL0461719|
        
-        
+      @REGRESSION @TEST  
        Scenario Outline: Recent Activity search by name
 
         Given the user is on the adviser platform login page
